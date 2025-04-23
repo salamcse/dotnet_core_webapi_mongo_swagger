@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "ACrA4G9y3jqwTzjuOUHyx8qfuVg1DnoKxAFk4Dl2FRQ=",
+  "Source": "CoreDotNetToken",
+  "BasePath": "_content/CoreDotNetToken",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
