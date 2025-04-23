@@ -18,6 +18,11 @@ namespace dotnetcoreapiwithmongo.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register(LoginModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState); // will return validation errors
+            }
+
             var result = await _authService.RegisterUserAsync(model.Username, model.Password);
             if (!result) return BadRequest("User already exists");
 
