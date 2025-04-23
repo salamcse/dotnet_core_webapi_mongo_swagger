@@ -30,8 +30,12 @@ namespace CoreDotNetToken.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(Student student)
+        public async Task<IActionResult> Create([FromBody] Student student)
         {
+            //if (!ModelState.IsValid)
+            //{
+            //    return BadRequest(ModelState);
+            //}
             await _studentRepo.CreateAsync(student);
             return CreatedAtAction(nameof(Get), new { id = student.Id }, student);
         }
